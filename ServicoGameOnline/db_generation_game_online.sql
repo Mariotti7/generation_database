@@ -10,6 +10,10 @@ insert into tb_classe values('1', 'Guerreiro', 'Sentar o aço'),
 select * from tb_classe;
 select * from tb_personagem;
 
+select p.nome, c.categoria, p.poder, c.funcao, p.nivel, p.defesa
+from tb_classe as c inner join tb_personagem as p
+on c.id_classe = p.tb_classe_id_classe;
+
 select nome, poder, nivel
 from tb_personagem 
 where nivel > 2000
